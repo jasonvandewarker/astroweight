@@ -16,6 +16,18 @@ var sel = document.getElementById('planets');
 for(var i = 0; i < planets.length; i++) {
     var option = document.createElement('option');
     option.innerHTML = planets[i][0];
-    option.value = planets[i];
+    option.value = planets[i][1];
     sel.appendChild(option);
 }
+
+function calculateWeight() {
+  document.getElementById('singlebutton').onclick = function handleClickEvent(e) {
+  e.preventDefault();
+  var choose = document.getElementById('planets').selectedIndex;
+  var gravity = document.getElementById('planets')[choose].value;
+  var weight = document.getElementById('userWeight').value;
+  document.getElementById('output').append("On that planet you would weight " + weight * gravity + " lbs. Geeeeeez.");
+    //alert(weight * gravity);
+}}
+
+calculateWeight();
