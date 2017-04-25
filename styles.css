@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  font-family: 'Palanquin Dark', sans-serif;
+  background-image: url(stars.jpg);
+  background-size: 100% 100% cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin-bottom: 35px;
+  font-weight: bold;
+  color: white;
+}
+
+button {
+  border-radius: 4px;
+}
+
+p {
+  color: white;
+}
+
+form {
+  padding: 15px;
+  font-size: 150%;
+}
