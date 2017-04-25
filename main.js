@@ -12,6 +12,7 @@ var planets = [
   ['Sun', 27.9]
 ];
 
+
 var sel = document.getElementById('planets');
 for(var i = 0; i < planets.length; i++) {
     var option = document.createElement('option');
@@ -25,8 +26,9 @@ function calculateWeight() {
   e.preventDefault();
   var choose = document.getElementById('planets').selectedIndex;
   var gravity = document.getElementById('planets')[choose].value;
-  var weight = document.getElementById('userWeight').value;
-  document.getElementById('output').append("On that planet you would weight " + weight * gravity + " lbs. Geeeeeez.");
+  var userWeight = document.getElementById('userWeight').value;
+  var result = Math.round(userWeight * gravity);
+  document.getElementById('output').append("On that planet you would weigh " + result + " lbs. Geeeeeez.");
     //alert(weight * gravity);
 }}
 
